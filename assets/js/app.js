@@ -4,23 +4,34 @@ var isAnimating = false;
 
 btn.addEventListener("click", function() {
     if (!isAnimating) {
+      const quadradoTamanho = 300;
+      const background = document.querySelector("background-3")
+      // Gerar números aleatórios para as coordenadas X e Y, considerando o tamanho do elemento
+      const x = Math.random() * (quadradoTamanho - -150);
+      const y = Math.random() * (quadradoTamanho - -150);
         isAnimating = true;
-        position = position === 0 ? 150 : 0;
-        btn.style.transform = `translate(0px, ${position}px)`;
-       // btn.style.transition = "all 0.2s ease";
+        position = position === 0 ? Math.random() * 300 : 0;
+        btn.style.transform = `translate(${x}px, ${y}px)`;
+        btn.style.transition = "all 0.2s ease";
 
         setTimeout(function() {
             isAnimating = false;
-        }, 200);
+        }, 50);
     }
 });
 
 btn.addEventListener("mouseover", function() {
     if (!isAnimating) {
         isAnimating = true;
-        position = position === 0 ? 150 : 0;
-        btn.style.transform = `translate(0px, ${position}px)`;
-       // btn.style.transition = "all 0.2s ease";
+          const quadradoTamanho = 300;
+          const background = document.querySelector("background-3")
+          // Gerar números aleatórios para as coordenadas X e Y, considerando o tamanho do elemento
+          const x = Math.random() * (quadradoTamanho - -150);
+          const y = Math.random() * (quadradoTamanho - -150);
+        
+        position = position === 0 ? Math.random() * 300 : 0;
+        btn.style.transform = `translate(${x}px, ${y}px)`;
+        btn.style.transition = "all 0.2s ease";
 
         setTimeout(function() {
             isAnimating = false;
