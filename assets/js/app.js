@@ -4,14 +4,20 @@ var isAnimating = false;
 
 btn.addEventListener("click", function() {
     if (!isAnimating) {
-      const quadradoTamanho = 300;
-      const background = document.querySelector("background-3")
+      
+      const quadradoTamanho = 150;
+      const background = document.querySelector(".background-3");
+      const elementoTamanho = background.getBoundingClientRect(); // Obter as dimensões do elemento
+      const width = screen.width
+      const height = screen.height
+
+
       // Gerar números aleatórios para as coordenadas X e Y, considerando o tamanho do elemento
-      const x = Math.random() * (quadradoTamanho - -150);
-      const y = Math.random() * (quadradoTamanho - -150);
-        isAnimating = true;
-        position = position === 0 ? Math.random() * 300 : 0;
-        btn.style.transform = `translate(${x}px, ${y}px)`;
+      const x = Math.random() * (quadradoTamanho - width);
+      const y = Math.random() * (quadradoTamanho - height);
+      
+      // Aplicar a transformação
+      btn.style.transform = `translate(${x}px, ${y}px)`;
         btn.style.transition = "all 0.2s ease";
 
         setTimeout(function() {
@@ -23,13 +29,18 @@ btn.addEventListener("click", function() {
 btn.addEventListener("mouseover", function() {
     if (!isAnimating) {
         isAnimating = true;
-          const quadradoTamanho = 300;
-          const background = document.querySelector("background-3")
-          // Gerar números aleatórios para as coordenadas X e Y, considerando o tamanho do elemento
-          const x = Math.random() * (quadradoTamanho - -150);
-          const y = Math.random() * (quadradoTamanho - -150);
+        const quadradoTamanho = 150;
+        const background = document.querySelector(".background-3");
+        const elementoTamanho = background.getBoundingClientRect(); // Obter as dimensões do elemento
+        const width = screen.width
+        const height = screen.height
+
+
+        // Gerar números aleatórios para as coordenadas X e Y, considerando o tamanho do elemento
+        const x = Math.random() * (quadradoTamanho - width);
+        const y = Math.random() * (quadradoTamanho - height);
         
-        position = position === 0 ? Math.random() * 300 : 0;
+        // Aplicar a transformação
         btn.style.transform = `translate(${x}px, ${y}px)`;
         btn.style.transition = "all 0.2s ease";
 
