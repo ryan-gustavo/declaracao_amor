@@ -56,9 +56,9 @@ sim.addEventListener("click", () => {
 enviarMensagemDiscord("Ela/Ele aceitou S2<:havenzinha:1287286613969473616>")
 let timerInterval
 Swal.fire({
-  title: 'Obrigado 😍',
-  html: 'Prometo lhe fazer feliz. 💘',
-  timer: 2000,
+  title: '😍',
+  html: 'Nem 1 milhão de linhas de código seriam capazes de registrar o amor que sinto por você, linda <3. 💘',
+  timer: 7000,
   timerProgressBar: true,
   didOpen: () => {
     Swal.showLoading()
