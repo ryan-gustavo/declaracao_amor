@@ -7,7 +7,7 @@ btn.addEventListener("click", function() {
         isAnimating = true;
         position = position === 0 ? 150 : 0;
         btn.style.transform = `translate(0px, ${position}px)`;
-        btn.style.transition = "all 0.2s ease";
+       // btn.style.transition = "all 0.2s ease";
 
         setTimeout(function() {
             isAnimating = false;
@@ -20,7 +20,7 @@ btn.addEventListener("mouseover", function() {
         isAnimating = true;
         position = position === 0 ? 150 : 0;
         btn.style.transform = `translate(0px, ${position}px)`;
-        btn.style.transition = "all 0.2s ease";
+       // btn.style.transition = "all 0.2s ease";
 
         setTimeout(function() {
             isAnimating = false;
